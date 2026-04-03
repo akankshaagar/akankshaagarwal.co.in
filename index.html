@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Akanksha Agarwal — Frontend Developer</title>
+    <meta
+      name="description"
+      content="Frontend Developer with 5+ years of experience. React, TypeScript, JavaScript. Currently at Capgemini for Schneider Electric."
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
@@ -16,7 +20,6 @@
         margin: 0;
         padding: 0;
       }
-
       :root {
         --navy: #0d1b2a;
         --navy-mid: #1a2e45;
@@ -32,11 +35,9 @@
         --font-display: "Playfair Display", Georgia, serif;
         --font-body: "DM Sans", sans-serif;
       }
-
       html {
         scroll-behavior: smooth;
       }
-
       body {
         font-family: var(--font-body);
         font-weight: 400;
@@ -65,7 +66,6 @@
         font-family: var(--font-display);
         font-size: 1.2rem;
         color: var(--gold);
-        letter-spacing: 0.02em;
         text-decoration: none;
       }
       .nav-links {
@@ -145,7 +145,7 @@
       .hero h1 {
         font-family: var(--font-display);
         font-size: clamp(2.8rem, 6vw, 5rem);
-        color: #ffffff;
+        color: #fff;
         line-height: 1.1;
         margin-bottom: 1.5rem;
         animation: fadeUp 0.7s 0.1s ease both;
@@ -156,10 +156,38 @@
       .hero-sub {
         font-size: 1.1rem;
         color: rgba(255, 255, 255, 0.55);
-        max-width: 540px;
-        margin-bottom: 2.5rem;
+        max-width: 580px;
+        margin-bottom: 1.5rem;
         font-weight: 300;
         animation: fadeUp 0.7s 0.2s ease both;
+      }
+      .hero-highlights {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 2.5rem;
+        animation: fadeUp 0.7s 0.25s ease both;
+      }
+      .hero-stat {
+        text-align: center;
+      }
+      .hero-stat-num {
+        display: block;
+        font-family: var(--font-display);
+        font-size: 1.8rem;
+        color: var(--gold);
+        line-height: 1;
+      }
+      .hero-stat-label {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.4);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .hero-divider {
+        width: 1px;
+        background: rgba(255, 255, 255, 0.1);
+        align-self: stretch;
       }
       .hero-cta {
         display: flex;
@@ -302,6 +330,18 @@
         font-size: 0.88rem;
         color: #6b7280;
       }
+      .award-badge {
+        background: var(--navy);
+        color: var(--gold);
+        padding: 0.8rem 1.2rem;
+        border-radius: 4px;
+        font-size: 0.82rem;
+        margin-top: 0.5rem;
+      }
+      .award-badge strong {
+        display: block;
+        margin-bottom: 0.2rem;
+      }
 
       /* SKILLS */
       .skills-grid {
@@ -336,7 +376,6 @@
         font-weight: 500;
         padding: 5px 12px;
         border-radius: 2px;
-        letter-spacing: 0.02em;
       }
       .skill-tag.featured {
         background: var(--navy);
@@ -397,13 +436,24 @@
       .timeline-desc {
         color: #4a5568;
         font-size: 0.95rem;
+        padding-left: 1rem;
       }
       .timeline-desc li {
         margin-bottom: 0.4rem;
-        padding-left: 1rem;
       }
       .timeline-desc li::marker {
         color: var(--gold);
+      }
+      .timeline-award {
+        display: inline-block;
+        background: rgba(201, 168, 76, 0.12);
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        color: var(--gold);
+        font-size: 0.78rem;
+        padding: 4px 10px;
+        border-radius: 2px;
+        margin-top: 0.5rem;
+        font-weight: 500;
       }
 
       /* PROJECTS */
@@ -425,14 +475,16 @@
       }
       .project-top {
         background: var(--navy);
-        height: 120px;
+        height: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-family: var(--font-display);
-        font-size: 2rem;
+        font-size: 1.1rem;
         color: var(--gold);
         letter-spacing: 0.04em;
+        padding: 0 1.5rem;
+        text-align: center;
       }
       .project-body {
         padding: 1.5rem;
@@ -447,7 +499,7 @@
       }
       .project-title {
         font-family: var(--font-display);
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         color: var(--navy);
         margin-bottom: 0.6rem;
       }
@@ -499,7 +551,7 @@
         border: 1px solid var(--border);
         border-radius: 4px;
         transition: border-color 0.2s, color 0.2s;
-        font-size: 0.95rem;
+        font-size: 0.92rem;
       }
       .contact-link:hover {
         border-color: var(--gold);
@@ -555,30 +607,10 @@
         resize: vertical;
         min-height: 120px;
       }
-      .form-note {
-        font-size: 0.82rem;
-        color: var(--muted);
-        margin-top: 0.25rem;
-      }
-
-      /* FOOTER */
-      footer {
-        background: var(--navy);
-        padding: 2.5rem 5%;
-        text-align: center;
-      }
-      footer p {
-        color: rgba(255, 255, 255, 0.35);
-        font-size: 0.85rem;
-      }
-      footer a {
-        color: var(--gold);
-        text-decoration: none;
-      }
 
       /* RESUME BANNER */
       .resume-banner {
-        background: linear-gradient(135deg, var(--navy) 60%, var(--navy-light));
+        background: var(--navy);
         padding: 4rem 5%;
         text-align: center;
       }
@@ -594,7 +626,22 @@
         font-size: 0.95rem;
       }
 
-      /* ANIMATIONS */
+      /* FOOTER */
+      footer {
+        background: var(--navy);
+        padding: 2.5rem 5%;
+        text-align: center;
+        border-top: 1px solid rgba(201, 168, 76, 0.15);
+      }
+      footer p {
+        color: rgba(255, 255, 255, 0.35);
+        font-size: 0.85rem;
+      }
+      footer a {
+        color: var(--gold);
+        text-decoration: none;
+      }
+
       @keyframes fadeUp {
         from {
           opacity: 0;
@@ -606,7 +653,6 @@
         }
       }
 
-      /* RESPONSIVE */
       @media (max-width: 768px) {
         .nav-links {
           display: none;
@@ -622,11 +668,13 @@
         section {
           padding: 64px 6%;
         }
+        .hero-highlights {
+          gap: 1.2rem;
+        }
       }
     </style>
   </head>
   <body>
-    <!-- NAV -->
     <nav>
       <a href="#" class="nav-logo">Akanksha Agarwal</a>
       <ul class="nav-links">
@@ -641,14 +689,35 @@
     <!-- HERO -->
     <section class="hero" id="home">
       <div class="hero-inner">
-        <span class="hero-badge">Frontend Developer · Capgemini</span>
+        <span class="hero-badge"
+          >Senior Frontend Developer · Capgemini × Schneider Electric</span
+        >
         <h1>
-          Crafting Digital<br />Experiences that<br /><span>Actually Work</span>
+          Crafting Digital<br />Experiences that<br /><span
+            >Actually Matter</span
+          >
         </h1>
         <p class="hero-sub">
-          I build clean, performant, and accessible user interfaces — currently
-          working on enterprise-scale applications for Schneider Electric.
+          From national cybersecurity dashboards for the Government of India to
+          enterprise applications for Schneider Electric — I build fast,
+          accessible, and visually refined web experiences.
         </p>
+        <div class="hero-highlights">
+          <div class="hero-stat">
+            <span class="hero-stat-num">5+</span>
+            <span class="hero-stat-label">Years Experience</span>
+          </div>
+          <div class="hero-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">5+</span>
+            <span class="hero-stat-label">Industries</span>
+          </div>
+          <div class="hero-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">IB</span>
+            <span class="hero-stat-label">Govt. Recognition</span>
+          </div>
+        </div>
         <div class="hero-cta">
           <a href="#projects" class="btn-primary">View My Work</a>
           <a href="#contact" class="btn-outline">Get In Touch</a>
@@ -661,36 +730,41 @@
       <div class="section-inner">
         <p class="section-label">About Me</p>
         <h2 class="section-title">
-          A Frontend Developer<br />Focused on Quality
+          A Developer Who's Seen<br />the Full Spectrum
         </h2>
         <div class="section-divider"></div>
         <div class="about-grid">
           <div class="about-text">
             <p>
-              Hi, I'm Akanksha — a frontend developer with a passion for
-              building polished, user-friendly interfaces. I'm currently
-              employed at <strong>Capgemini</strong>, where I work on the
-              <strong>Schneider Electric</strong> client profile, delivering
-              enterprise-grade web solutions.
+              Hi, I'm Akanksha — a Frontend Developer with over
+              <strong>5 years of experience</strong> across enterprise,
+              government, healthcare, and fintech domains. I'm currently at
+              <strong>Capgemini</strong>, delivering frontend solutions for
+              <strong>Schneider Electric</strong>.
             </p>
             <p>
-              My focus is on writing clean, maintainable code and collaborating
-              closely with design and backend teams to bring complex products to
-              life in the browser.
+              My background spans leading teams, building mission-critical
+              products, and consistently improving performance and
+              accessibility. I've built everything from a national
+              fraud-tracking system (used by police and banks across India) to
+              pharmaceutical websites for Pfizer.
             </p>
             <p>
-              When I'm not pushing pixels, I'm exploring new frontend patterns,
-              contributing to open-source projects, and staying sharp on modern
-              JavaScript.
+              I care deeply about clean code, performance, and experiences that
+              work for every user — not just ideal ones.
             </p>
             <div class="about-stats">
               <div class="stat-card">
-                <span class="stat-number">1+</span>
-                <span class="stat-label">Year at Capgemini</span>
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Years of Frontend Development</span>
               </div>
               <div class="stat-card">
-                <span class="stat-number">SE</span>
-                <span class="stat-label">Schneider Electric Profile</span>
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Industries Delivered</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">IB</span>
+                <span class="stat-label">Govt. of India Recognition</span>
               </div>
             </div>
           </div>
@@ -698,29 +772,45 @@
             <div class="highlight-item">
               <strong>Current Role</strong>
               <span
-                >Frontend Developer at Capgemini, working on Schneider
-                Electric</span
+                >Frontend Developer at Capgemini — Schneider Electric
+                profile</span
               >
             </div>
             <div class="highlight-item">
-              <strong>Domain Expertise</strong>
+              <strong>Core Stack</strong>
               <span
-                >Enterprise web applications, component-driven development</span
+                >React, Redux, JavaScript (ES6+), TypeScript, CSS3/SCSS,
+                Tailwind</span
+              >
+            </div>
+            <div class="highlight-item">
+              <strong>Specialisation</strong>
+              <span
+                >Performance optimization, accessibility (WCAG), component
+                architecture</span
+              >
+            </div>
+            <div class="highlight-item">
+              <strong>Domain Experience</strong>
+              <span
+                >Enterprise, Government (MHA/GoI), Healthcare, Fintech,
+                Pharma</span
               >
             </div>
             <div class="highlight-item">
               <strong>Location</strong>
               <span>India · Open to remote collaboration worldwide</span>
             </div>
-            <div class="highlight-item">
-              <strong>Focus Areas</strong>
-              <span
-                >Performance, accessibility, and scalable UI architecture</span
+            <div class="award-badge">
+              <strong
+                >🏆 Intelligence Bureau, MoHA — Government of India</strong
               >
+              Official appreciation for contributions to the CyberSafe national
+              fraud tracking system
             </div>
-            <div class="highlight-item">
-              <strong>Personal Domain</strong>
-              <span>akankshaagarwal.co.in — you're here!</span>
+            <div class="award-badge" style="margin-top: 0.5rem">
+              <strong>🏆 Best Team of the Year 2024 — Newpage Digital</strong>
+              For exceptional delivery of high-impact web solutions
             </div>
           </div>
         </div>
@@ -738,26 +828,35 @@
             <h3>Core Languages</h3>
             <div class="skill-tags">
               <span class="skill-tag featured">JavaScript (ES6+)</span>
+              <span class="skill-tag featured">TypeScript</span>
               <span class="skill-tag featured">HTML5</span>
               <span class="skill-tag featured">CSS3</span>
-              <span class="skill-tag">TypeScript</span>
             </div>
           </div>
           <div class="skill-category">
             <h3>Frameworks & Libraries</h3>
             <div class="skill-tags">
               <span class="skill-tag featured">React.js</span>
-              <span class="skill-tag">Redux</span>
+              <span class="skill-tag featured">Redux</span>
+              <span class="skill-tag">React-Admin</span>
+              <span class="skill-tag">Context API</span>
             </div>
           </div>
           <div class="skill-category">
             <h3>Styling & UI</h3>
             <div class="skill-tags">
               <span class="skill-tag featured">Tailwind CSS</span>
-              <span class="skill-tag">SASS/SCSS</span>
-              <span class="skill-tag">Bootstrap</span>
+              <span class="skill-tag featured">SCSS/SASS</span>
               <span class="skill-tag">Material UI</span>
-              <span class="skill-tag">Styled Components</span>
+              <span class="skill-tag">Bootstrap</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Performance & Quality</h3>
+            <div class="skill-tags">
+              <span class="skill-tag featured">Core Web Vitals</span>
+              <span class="skill-tag">WCAG Accessibility</span>
+              <span class="skill-tag">SEO Best Practices</span>
             </div>
           </div>
           <div class="skill-category">
@@ -765,10 +864,10 @@
             <div class="skill-tags">
               <span class="skill-tag featured">Git & GitHub</span>
               <span class="skill-tag">VS Code</span>
-              <span class="skill-tag">Webpack</span>
-              <span class="skill-tag">Vite</span>
-              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Postman</span>
               <span class="skill-tag">Jira</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Webpack</span>
             </div>
           </div>
         </div>
@@ -783,90 +882,231 @@
         <div class="section-divider"></div>
         <div class="timeline">
           <div class="timeline-item">
-            <p class="timeline-period">2023 — Present</p>
+            <p class="timeline-period">Feb 2025 — Present</p>
             <h3 class="timeline-role">Frontend Developer</h3>
             <p class="timeline-company">
               Capgemini · Schneider Electric Profile
             </p>
             <ul class="timeline-desc">
               <li>
-                Developing and maintaining responsive web interfaces for
-                Schneider Electric's enterprise applications
+                Developing and maintaining responsive, accessible web interfaces
+                for Schneider Electric's enterprise applications
               </li>
               <li>
-                Collaborating with cross-functional teams across design,
-                backend, and QA
+                Building reusable React component libraries, reducing
+                development time across product teams
               </li>
               <li>
-                Building reusable component libraries to standardize the UI
-                across products
+                Collaborating in Agile sprints with cross-functional teams
+                across UX, backend, and QA
               </li>
               <li>
-                Participating in Agile sprints, code reviews, and technical
-                planning sessions
+                Ensuring WCAG accessibility compliance and high performance
+                across all deliverables
               </li>
             </ul>
           </div>
-          <!-- Add more roles here -->
+
+          <div class="timeline-item">
+            <p class="timeline-period">Feb 2024 — Jan 2025</p>
+            <h3 class="timeline-role">Software Developer – Web</h3>
+            <p class="timeline-company">NewPage Digital Healthcare Solutions</p>
+            <ul class="timeline-desc">
+              <li>
+                Led development of Pfizer's INLYTA® pharmaceutical website using
+                HTML5 and CSS3
+              </li>
+              <li>
+                Focused on performance and accessibility optimizations across
+                all deliverables
+              </li>
+              <li>
+                Led a team building NP360 Lifeline CRM (React + TypeScript) —
+                modules for clients, resources, permissions, and weekly reports
+              </li>
+              <li>
+                Developed reusable UI components (data tables, charts) enabling
+                rapid prototyping and product scaling
+              </li>
+            </ul>
+            <span class="timeline-award">🏆 Best Team of the Year 2024</span>
+          </div>
+
+          <div class="timeline-item">
+            <p class="timeline-period">Nov 2021 — Jan 2023</p>
+            <h3 class="timeline-role">MTM Manager (Web Developer)</h3>
+            <p class="timeline-company">
+              Space Telelink (P) Ltd — Ministry of Home Affairs, Government of
+              India
+            </p>
+            <ul class="timeline-desc">
+              <li>
+                Built the complete frontend for CyberSafe — a real-time fraud
+                tracking dashboard used by police and banks nationwide
+              </li>
+              <li>
+                Developed proprietary security-focused frontend libraries to
+                eliminate commercial software vulnerabilities
+              </li>
+              <li>
+                Created accessible data visualizations to display complex fraud
+                analytics clearly across all device types
+              </li>
+              <li>
+                Worked closely with PHP backend developers on seamless API
+                integration
+              </li>
+            </ul>
+            <span class="timeline-award"
+              >🏆 Appreciation Letter — Intelligence Bureau, MoHA, Government of
+              India</span
+            >
+          </div>
+
+          <div class="timeline-item">
+            <p class="timeline-period">Sep 2020 — Nov 2021</p>
+            <h3 class="timeline-role">UI Developer</h3>
+            <p class="timeline-company">
+              Growell HR Solutions (P) Ltd — Ministry of Home Affairs,
+              Government of India
+            </p>
+            <ul class="timeline-desc">
+              <li>
+                Built SocioAnalytica — a Twitter analytics dashboard tracking
+                hashtags, user behavior, and engagement trends in real-time
+              </li>
+              <li>
+                Developed interactive data visualizations and integrated PDF
+                export for analytics reports
+              </li>
+              <li>
+                Built an admin dashboard managing 50,000+ archived news articles
+                from 50+ national/international sources
+              </li>
+            </ul>
+          </div>
         </div>
-        <p style="margin-top: 0.5rem; font-size: 0.88rem; color: var(--muted)">
-          ✏️ Update dates, description, and add any previous roles here.
-        </p>
       </div>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="alt">
       <div class="section-inner">
-        <p class="section-label">Projects</p>
+        <p class="section-label">Notable Projects</p>
         <h2 class="section-title">Things I've Built</h2>
         <div class="section-divider"></div>
         <div class="projects-grid">
           <div class="project-card">
-            <div class="project-top">P1</div>
+            <div class="project-top">CyberSafe Dashboard</div>
             <div class="project-body">
-              <p class="project-type">Web App</p>
-              <h3 class="project-title">Project Name Here</h3>
+              <p class="project-type">Government · National Security</p>
+              <h3 class="project-title">
+                Real-Time Fraud Tracking System (www.cybersafe.gov.in)
+              </h3>
               <p class="project-desc">
-                Brief description of what this project does, the problem it
-                solves, and your role in building it.
-              </p>
-              <div class="project-stack">
-                <span class="stack-tag">React</span>
-                <span class="stack-tag">Tailwind</span>
-                <span class="stack-tag">Node.js</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-top">P2</div>
-            <div class="project-body">
-              <p class="project-type">UI Component Library</p>
-              <h3 class="project-title">Component Library</h3>
-              <p class="project-desc">
-                A reusable component library built with best practices in mind —
-                accessible, responsive, and well-documented.
-              </p>
-              <div class="project-stack">
-                <span class="stack-tag">React</span>
-                <span class="stack-tag">Storybook</span>
-                <span class="stack-tag">TypeScript</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-top">P3</div>
-            <div class="project-body">
-              <p class="project-type">Personal Project</p>
-              <h3 class="project-title">Your Next Project</h3>
-              <p class="project-desc">
-                Add your own projects here — side projects, open source
-                contributions, or anything you've built outside of work.
+                A mission-critical security dashboard used by police and banks
+                across India to track fraudsters in real-time. Recognized by the
+                Intelligence Bureau, MoHA.
               </p>
               <div class="project-stack">
                 <span class="stack-tag">JavaScript</span>
-                <span class="stack-tag">CSS</span>
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
+                <span class="stack-tag">PHP APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">NP360 Lifeline CRM</div>
+            <div class="project-body">
+              <p class="project-type">Healthcare · SaaS</p>
+              <h3 class="project-title">Proprietary CRM Platform</h3>
+              <p class="project-desc">
+                Led a team to build a full CRM system from an internal tool to a
+                marketable product — modules for clients, resources, projects,
+                permissions, and weekly reports.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">React</span>
+                <span class="stack-tag">TypeScript</span>
+                <span class="stack-tag">Redux</span>
+                <span class="stack-tag">REST APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">Pfizer INLYTA® Website</div>
+            <div class="project-body">
+              <p class="project-type">Pharma · Healthcare</p>
+              <h3 class="project-title">Pharmaceutical Brand Website</h3>
+              <p class="project-desc">
+                Led the rebuild of Pfizer's cancer treatment drug website with
+                full branding compliance, performance optimizations, and
+                accessibility standards.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
+                <span class="stack-tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">SocioAnalytica</div>
+            <div class="project-body">
+              <p class="project-type">Government · Analytics</p>
+              <h3 class="project-title">Twitter Analytics Platform</h3>
+              <p class="project-desc">
+                A centralized analytics dashboard tracking hashtags, user
+                behavior, and engagement trends with real-time data
+                visualizations and PDF export.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">Charts</span>
+                <span class="stack-tag">PDF Export</span>
+                <span class="stack-tag">REST APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">Mutual Fund Suite</div>
+            <div class="project-body">
+              <p class="project-type">Fintech · Financial Tools</p>
+              <h3 class="project-title">Financial Calculators & Websites</h3>
+              <p class="project-desc">
+                Responsive websites and interactive SIP/Lumpsum calculators for
+                mutual fund advisors — pixel-perfect from PSD designs with full
+                mobile support.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
+                <span class="stack-tag">Bootstrap</span>
+                <span class="stack-tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">This Portfolio</div>
+            <div class="project-body">
+              <p class="project-type">Personal · Open Source</p>
+              <h3 class="project-title">akankshaagarwal.co.in</h3>
+              <p class="project-desc">
+                This portfolio site — built from scratch with semantic HTML,
+                vanilla CSS, and zero frameworks. Hosted on GitHub Pages with
+                custom domain.
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
                 <span class="stack-tag">GitHub Pages</span>
+                <span class="stack-tag">GoDaddy DNS</span>
               </div>
             </div>
           </div>
@@ -878,10 +1118,10 @@
     <div class="resume-banner" id="resume">
       <h2>Download My Resume</h2>
       <p>
-        Get a full overview of my skills, experience, and education in one
-        place.
+        Experience across enterprise, government, healthcare, and fintech — in
+        one clean document.
       </p>
-      <a href="resume.pdf" download class="btn-primary">Download CV / Resume</a>
+      <a href="#" download class="btn-primary">Download Resume (PDF)</a>
     </div>
 
     <!-- CONTACT -->
@@ -893,8 +1133,9 @@
         <div class="contact-grid">
           <div class="contact-info">
             <p>
-              Whether you're looking to collaborate, have a project in mind, or
-              just want to say hello — I'd love to hear from you.
+              Open to interesting frontend opportunities, freelance
+              collaborations, or just a good tech conversation. Feel free to
+              reach out!
             </p>
             <div class="contact-links">
               <a href="mailto:agrwalakanksha@gmail.com" class="contact-link">
@@ -907,7 +1148,7 @@
                 class="contact-link"
               >
                 <div class="contact-link-icon">in</div>
-                https://www.linkedin.com/in/akankshaagarwal93/
+                linkedin.com/in/akankshaagarwal93
               </a>
               <a
                 href="https://github.com/akankshaagar"
@@ -915,40 +1156,56 @@
                 class="contact-link"
               >
                 <div class="contact-link-icon">gh</div>
-                https://github.com/akankshaagar
+                github.com/akankshaagar
               </a>
             </div>
           </div>
-          <div>
-            <!-- <div class="contact-form">
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" placeholder="Jane Smith" />
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="jane@example.com" />
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea placeholder="Tell me about your project or just say hi..."></textarea>
-          </div>
-          <div>
-            <button class="btn-primary" onclick="alert('To make this form actually send emails, connect it to Formspree.io — it\'s free! Replace this onclick with their form action.')">Send Message</button>
-            <p class="form-note">✏️ Connect to <a href="https://formspree.io" target="_blank" style="color: var(--gold);">Formspree.io</a> (free) to make this form work.</p>
-          </div>
-        </div> -->
+          <div class="contact-form">
+            <!-- <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="Jane Smith" />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="jane@example.com" />
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea
+                placeholder="Tell me about your project or opportunity..."
+              ></textarea>
+            </div> -->
+            <!-- <div>
+              <button
+                class="btn-primary"
+                onclick="alert('Connect this form to Formspree.io (free) to receive emails. Visit formspree.io, create a form, and replace this button with their form action.')"
+              >
+                Send Message
+              </button>
+              <p
+                style="
+                  font-size: 0.82rem;
+                  color: var(--muted);
+                  margin-top: 0.5rem;
+                "
+              >
+                To activate this form: connect to
+                <a
+                  href="https://formspree.io"
+                  target="_blank"
+                  style="color: var(--gold)"
+                  >formspree.io</a
+                >
+                (free)
+              </p>
+            </div> -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
-      <p>
-        © 2025 Akanksha Agarwal ·
-        <a href="https://akankshaagarwal.co.in">akankshaagarwal.co.in</a>
-      </p>
+      <p>© 2025 Akanksha Agarwa</p>
     </footer>
   </body>
 </html>
